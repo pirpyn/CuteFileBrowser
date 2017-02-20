@@ -3,6 +3,8 @@
 This is a fork of [TutorialZine CuteFileBrowser](http://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php/)
 It was created to give full liberty over folder's path.
 
+You can see it in action at [this website](https://lamacs.fr/browse)
+
 ## How to :
 Upload all files wherever you want on your server. 
 Assuming you want to display some `/path/to/dir` folder. Then change `$path` variable in `scan.php` according to that path.
