@@ -1,6 +1,6 @@
 <?php
 
-$path = "/path/to/dir";
+$path = "/path/to/folder";
 $dirname = end(explode('/',$path));
 
 // Run the recursive function 
