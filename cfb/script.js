@@ -2,8 +2,8 @@ $(function(){
 
   var scripts = document.getElementsByTagName("script");
   var thisfile = scripts[scripts.length-1].src.replace('://',''); // replacing the http(s):// to http
-  // scan.php should be two folder above this file
-  var scanpath = thisfile.slice(thisfile.indexOf("/"),thisfile.lastIndexOf("/"))+'/../../scan.php';
+  // scan.php should be at the same place than this file
+  var scanpath = thisfile.slice(thisfile.indexOf("/"),thisfile.lastIndexOf("/"))+'/scan.php';
 
   var filemanager = $('.filemanager'),
     breadcrumbs = $('.breadcrumbs'),
@@ -11,7 +11,6 @@ $(function(){
   // Start by fetching the file data from scan.php with an AJAX request
 
   $.get(scanpath, function(data) {
-
 
     var response = [data],
       currentPath = '',
@@ -32,7 +31,6 @@ $(function(){
 
     }).trigger('hashchange');
 
-
     // Hiding and showing the search box
 
     filemanager.find('.search').click(function(){
@@ -43,7 +41,6 @@ $(function(){
       search.find('input[type=search]').show().focus();
 
     });
-
 
     // Listening for keyboard input on the search field.
     // We are using the "input" event which detects cut and paste
