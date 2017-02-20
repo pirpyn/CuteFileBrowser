@@ -1,13 +1,17 @@
 $(function(){
 
-  var instaldir = '/opt/cfb';
+  var scripts = document.getElementsByTagName("script");
+  var thisfile = scripts[scripts.length-1].src.replace('://',''); // replacing the http(s):// to http
+  // scan.php should be two folder above this file
+  var scanpath = thisfile.slice(thisfile.indexOf("/"),thisfile.lastIndexOf("/"))+'/../../scan.php';
 
   var filemanager = $('.filemanager'),
     breadcrumbs = $('.breadcrumbs'),
     fileList = filemanager.find('.data');
   // Start by fetching the file data from scan.php with an AJAX request
 
-  $.get(instaldir+'/scan.php', function(data) {
+  $.get(scanpath, function(data) {
+
 
     var response = [data],
       currentPath = '',
