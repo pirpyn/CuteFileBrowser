@@ -12,8 +12,8 @@ Assuming you want to display the folder `/files`.
 1. Move `index.html` to `/files` 
 2. Change 
   1. `path/to/folder` in `cfb/scan.php` to `/files`
-  2. `cfb/styles.css` in `cfb/styles.css` to `/opt/cfb/styles.css`
-  3. `cfb/script.js` in `cfb/script.js` to `/opt/cfb/styles.css`
+  2. `cfb/styles.css` in `/files/index.html` to `/opt/cfb/styles.css`
+  3. `cfb/script.js` in `/files/index.html` to `/opt/cfb/styles.css`
 
 Calling http://domain.ext/files will show the explorer.
 
