@@ -1,7 +1,6 @@
 <?php
 
 $path = realpath("/absolute/or/relative/path/to/files");
-$ext_to_exclude = array('php','html','.htacces');
 
 $dirname = end(explode('/',$path));
 
@@ -26,6 +25,7 @@ function scan($path,$dirname){
       if(!$f || $f[0] == '.') {
         continue; // Ignore hidden files
       }
+      $ext_to_exclude = array('php','html','.htacces');
       if(cmprExtension($f,$ext_to_exclude)) {
         continue; // Ignore some extensions
       }
